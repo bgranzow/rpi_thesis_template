@@ -1,0 +1,46 @@
+\chapter{THE FIRST CHAPTER}
+\label{chap:chapterone}
+
+\let\thefootnote\relax\footnotetext{
+This chapter has been submitted to:
+M.Y. Name, ``My super great article,''
+submitted for publication.}
+
+\section{Introduction}
+
+\blindtext
+
+\section{Content}
+
+\blindtext
+
+\begin{table}[hbt!]
+\centering
+\begin{tabular}{|c | c |}
+\hline
+a & b \\ \hline\hline
+0.01 & 0.02 \\ \hline
+0.03 & 0.04 \\ \hline
+\end{tabular}
+\caption{An example of a table in the thesis document.
+Notice the caption is above the table.}
+\label{table:mytable}
+\end{table}
+
+\blindtext
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.25\textwidth]{rpi_seal}
+\caption{An example of a figure in the thesis document.
+Notice the caption is below the table.}
+\label{fig:myfigure}
+\end{figure}
+
+Look! I am referencing Figure \ref{fig:myfigure}.
+Look! I am referencing Table \ref{table:mytable}.
+Look! I am referencing a citation \cite{areference}.
+
+\section{Conclusions}
+
+\blindtext

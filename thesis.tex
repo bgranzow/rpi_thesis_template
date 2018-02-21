@@ -1,0 +1,58 @@
+%% Use the RPI thesis document class.
+\documentclass[chap]{rpi_thesis}
+
+% Provides 1 in. margins on all sides of the page.
+% Adding the option 'showframe' to the \geometry options below
+% will show an outline of the margins on all pages.
+\usepackage{geometry}
+\geometry{
+left=1in,
+right=1in,
+top=1in,
+bottom=1in}
+
+% These options will provide most of the options for an IEEE
+% compliant bibliography and captions for figures. It is up to users to
+% capitilizations / abbreviations and other formatting is correct
+% in the `references.bib' file.
+\usepackage{cite}
+\usepackage{notoccite}
+\bibliographystyle{rpi_IEEE}
+\renewcommand{\bibname}{}
+
+% Consistently caption figures and tables  with a period
+% separating the figure number and the figure caption and
+% comply with the IEEE style guide for figure options.
+\usepackage[
+  labelsep=period,
+  justification=centering]{caption}
+\renewcommand{\captionfont}{\bfseries}
+\renewcommand{\figurename}{Fig.}
+
+% Place captions above tables as required by OGE
+\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
+
+% This package allows for the easy inclusion of figures
+\usepackage{graphicx}
+
+% This package allows for hyperrefs in the document, which can
+% allow easy navigation to citations and referenced equations,
+% chapters, and sections. This is very useful when writing.
+\usepackage[hidelinks]{hyperref}
+
+% The following packages are used to generate generic text and
+% can be removed once editing begins.
+\usepackage[english]{babel}
+\usepackage{blindtext}
+
+% The main body of the thesis document. Add or remove files as needed.
+\begin{document}
+\include{title}
+\include{acknowledge}
+\include{abstract}
+\include{chapter}
+\include{bibliography}
+\include{appendix}
+\end{document}

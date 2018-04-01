@@ -1,5 +1,5 @@
 %% 
-%% This is file `rpi_thesis.cls', for use at Rensselaer Polytechnic Institute.
+%% This is file `thesis.cls', for use at Rensselaer Polytechnic Institute.
 %% It is based on the standard LaTeX report class.
 %% Originally written by Harriet Borton (ITS), April 1996.
 %% Modified April 11, 1996; minor revisions February, 2001.
@@ -15,7 +15,7 @@
 %% ---------------------------------------- 
 %% 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{rpi_thesis}[2009/01/06 Rensselaer Polytechnic Institute]
+\ProvidesClass{thesis}[2009/01/06 Rensselaer Polytechnic Institute]
 %  Note that the setspace package is built in (code included near the end of 
 %  this file) to provide "line-and-a half spacing" (1.4 by default) and also
 %  the singlespace environment. 
@@ -463,8 +463,6 @@
   \fi  
  }
 
- % bng: for now, students will need to modify the title page directly in this
- % thesis class document.
  \def\titlepage{%
      \pagenumbering{roman}
      \thispagestyle{empty}
@@ -477,10 +475,10 @@
          for the Degree of\\ [10pt]
          \emph{\uppercase\expandafter{\@degree}} \\ [40pt]
          Approved by:\\
-         Dr. Advisor, Chair\\
-         Dr. Member 1\\
-         Dr. Member 2\\
-         Dr. Member 3\\
+         Dr. Professor 1, Chair \\
+         Dr. Professor 2 \\
+         Dr. Professor 3 \\
+         Dr. Professor 4
          \vskip 100pt
          \includegraphics[width=0.25\linewidth]{rpi_seal}
          \vskip 20pt

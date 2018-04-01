@@ -1,9 +1,7 @@
-%% Use the RPI thesis document class.
 \documentclass[chap]{rpi_thesis}
 
-% Provides 1 in. margins on all sides of the page.
-% Adding the option 'showframe' to the \geometry options below
-% will show an outline of the margins on all pages.
+% geometry
+% use option 'showframe' for neatness
 \usepackage{geometry}
 \geometry{
 left=1in,
@@ -11,43 +9,56 @@ right=1in,
 top=1in,
 bottom=1in}
 
-% These options will provide most of the options for an IEEE
-% compliant bibliography and captions for figures. It is up to users to
-% capitilizations / abbreviations and other formatting is correct
-% in the `references.bib' file.
+% citations
 \usepackage{cite}
 \usepackage{notoccite}
 \bibliographystyle{rpi_IEEE}
 \renewcommand{\bibname}{}
 
-% Consistently caption figures and tables  with a period
-% separating the figure number and the figure caption and
-% comply with the IEEE style guide for figure options.
+% captions
 \usepackage[
   labelsep=period,
   justification=centering]{caption}
-\renewcommand{\captionfont}{\bfseries}
-\renewcommand{\figurename}{Fig.}
+\usepackage{subcaption}
 
-% Place captions above tables as required by OGE
+% put captions above tables
 \usepackage{float}
 \floatstyle{plaintop}
 \restylefloat{table}
 
-% This package allows for the easy inclusion of figures
+% mathematics
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+
+% figures
 \usepackage{graphicx}
 
-% This package allows for hyperrefs in the document, which can
-% allow easy navigation to citations and referenced equations,
-% chapters, and sections. This is very useful when writing.
+% make things pretty
+\usepackage{color}
 \usepackage[hidelinks]{hyperref}
 
-% The following packages are used to generate generic text and
-% can be removed once editing begins.
-\usepackage[english]{babel}
-\usepackage{blindtext}
+% conform to IEEE
+\renewcommand{\captionfont}{\bfseries}
+\renewcommand{\figurename}{Fig.}
+\renewcommand*{\UrlNoBreaks}{\do\(\do\[\do\{\do\<\do\:}%
 
-% The main body of the thesis document. Add or remove files as needed.
+% href for toc
+\makeatletter
+\usepackage{etoolbox}
+\pretocmd{\tableofcontents}{%
+  \if@openright\cleardoublepage\else\clearpage\fi
+  \pdfbookmark[0]{\contentsname}{toc}%
+}{}{}%
+\makeatother
+
+% theorems and propositions
+\newtheorem{prop}{Proposition}
+\theoremstyle{remark}
+\newtheorem{rmk}{Remark}
+
 \begin{document}
 \include{title}
 \include{acknowledge}
